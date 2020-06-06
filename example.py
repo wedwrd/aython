@@ -1,7 +1,7 @@
 from aython import aython
 from http.server import HTTPServer
 
-def intent_handler(): # set up what to do with our intents that we recieve
+def intent_handler(): # set up what to do with the intents recieved
     if aython.alexa.intent_name == "Hello":
         auth_code= aython.alexa.auth_code() # if an auth code is sent get it
         aython.alexa.reply_message = alexa.build_speech_response("World") # replys with World
