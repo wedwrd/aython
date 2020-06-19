@@ -66,12 +66,6 @@ class alexa(BaseHTTPRequestHandler):
         response.write(json.dumps(alexa.reply_message).encode())
         self.wfile.write(response.getvalue())
 
-    def intent_name(self):
-        return self.data["request"]["intent"]["name"]
-
-    def access_token(self):
-
-
     @staticmethod
     def build_speech_response(msg,session_end = False):
         return {"response": {"outputSpeech": {"text": msg , "type": "PlainText"}, "shouldEndSession": session_end}, "sessionAttributes": {}, "version": "1.0"}
