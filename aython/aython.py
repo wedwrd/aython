@@ -1,5 +1,5 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import json,base64
+import json
 from io import BytesIO
 
 class alexa(BaseHTTPRequestHandler):
